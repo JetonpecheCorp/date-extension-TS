@@ -1,0 +1,17 @@
+{
+  "name": "date-extension",
+  "version": "1.0.0",
+  "description": "Ajout de methodes d'extension au type Date",
+  "author": "jetonpeche",
+  "scripts": {
+    "build": "npx tsc && node dist/index.js"
+  },
+  "keywords": ["date", "extension"],
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}
