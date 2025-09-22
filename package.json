@@ -1,8 +1,9 @@
 {
   "name": "@jetonpeche/date-extension",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Ajout de methodes d'extension au type Date",
   "author": "jetonpeche",
+  "main": "src/DateExtension.ts",
   "scripts": {
     "build": "npx tsc && node dist/index.js"
   },
