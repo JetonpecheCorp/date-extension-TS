@@ -1,10 +1,13 @@
 {
   "compilerOptions": {
     "target": "es6", 
-    "module": "commonjs", 
+    "module": "node16", 
     "outDir": "./dist",
+    "rootDir": "./src",
+    "declaration": true,
     "strict": true, 
-    "esModuleInterop": true 
+    "esModuleInterop": true,
+    "moduleResolution": "node16"
   },
   "include": [
     "src/**/*" 
