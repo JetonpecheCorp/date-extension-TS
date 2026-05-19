@@ -16,6 +16,11 @@ declare global {
     clone(): Date,
 
     /**
+     * Vérifier si c'est la date du jour
+     */
+    isToday(): boolean,
+
+    /**
      * Formatter la date ou l'heure de l'instance actuelle
      * 
      * @param _format format demandé  
