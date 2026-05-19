@@ -1,6 +1,6 @@
 {
   "name": "@jetonpeche/date-extension",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Ajout de methodes d'extension au type Date",
   "author": "jetonpeche",
   "main": "dist/DateExtension.js",
@@ -14,12 +14,15 @@
     "type": "git",
     "url": "https://github.com/JetonpecheCorp/date-extension-TS.git"
   },
-  "keywords": ["date", "extension"],
+  "keywords": [
+    "date",
+    "extension"
+  ],
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "@types/node": "^24.5.2",
+    "@types/node": "^25.9.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.2"
+    "typescript": "^6.0.3"
   }
 }
