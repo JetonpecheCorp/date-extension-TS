@@ -188,6 +188,16 @@ let date  = new Date();
 date.isWeek();
 ```
 
+## isToday
+
+Permet de savoir si c'est la date du jour
+
+### Exemple
+```js
+let date  = new Date();
+date.isToday();
+```
+
 # Methode d'extension Date partie heure
 
 ## setAddHour & setRemoveHour
