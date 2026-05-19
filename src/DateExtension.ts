@@ -16,6 +16,11 @@ declare global {
     clone(): Date,
 
     /**
+     * Vérifier si c'est la date du jour
+     */
+    isToday(): boolean,
+
+    /**
      * Formatter la date ou l'heure de l'instance actuelle
      * 
      * @param _format format demandé  
@@ -280,7 +285,7 @@ declare global {
      */
     createCalendar(_from: string | Date, _to: string | Date): Date[]
   }
-} 
+}
 
 //#region date
 Date.createCalendar = function(_from: string | Date, _to: string | Date): Date[]
@@ -329,6 +334,11 @@ Date.prototype.createCalendarTo = function(_to: string | Date): Date[]
 Date.prototype.clone = function(): Date
 {    
     return new Date(this.toISODateString());
+}
+
+Date.prototype.isToday = function(): boolean
+{
+    return this.toISODateString() == new Date().toISODateString();
 }
 
 Date.prototype.toFormat = function(_format: string): string
