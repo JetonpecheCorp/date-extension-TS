@@ -1,5 +1,7 @@
 # Methode d'extension Date
 
+Ne pas oublier: `import '@jetonpeche/date-extension';`
+
 ## toFormat
 
 Permet d'avoir la date et / ou l'heure au format voulu
