@@ -28,6 +28,15 @@ declare global {
     isEqual(_date: Date): boolean;
 
     /**
+     * Verifier si la date actuelle est dans l'interval (INCLUS)
+     * 
+     * @param _start debut de l'interval
+     * @param _end fin de l'interval
+     * @param _withTime prendre en compte la partie horaire
+     */
+    isInInterval(_start: Date, _end: Date, _withTime: boolean): boolean
+
+    /**
      * Formatter la date ou l'heure de l'instance actuelle
      * 
      * @param _format format demandé  
@@ -351,6 +360,26 @@ Date.prototype.isToday = function(): boolean
 Date.prototype.isEqual = function(_date: Date): boolean
 {
     return this.toISODateString() == _date.toISODateString(); 
+}
+
+Date.prototype.isInInterval = function(_start: Date, _end: Date, _withTime: boolean = false): boolean
+{
+    if(_withTime)
+        return this.getTime() >= _start.getTime() && this.getTime() <= _end.getTime();
+
+    else
+    {
+        // On crée de nouvelles instances pour ne pas modifier les dates d'origine (mutabilité)
+        const ACTUELLE = new Date(this.getTime());
+        const DEBUT = new Date(_start.getTime());
+        const FIN = new Date(_end.getTime());
+
+        ACTUELLE.setHours(0, 0, 0, 0);
+        DEBUT.setHours(0, 0, 0, 0);
+        FIN.setHours(0, 0, 0, 0);
+
+        return ACTUELLE.getTime() >= DEBUT.getTime() && ACTUELLE.getTime() <= FIN.getTime();
+    }
 }
 
 Date.prototype.toFormat = function(_format: string): string

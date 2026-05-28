@@ -26,6 +26,15 @@ declare global {
      * @param _date date à comparer
      */
     isEqual(_date: Date): boolean;
+    
+    /**
+     * Verifier si la date actuelle est dans l'interval (INCLUS)
+     * 
+     * @param _start debut de l'interval
+     * @param _end fin de l'interval
+     * @param _withTime prendre en compte la partie horaire
+     */
+    isInInterval(_start: Date, _end: Date, _withTime: boolean): boolean
 
     /**
      * Formatter la date ou l'heure de l'instance actuelle
