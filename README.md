@@ -200,6 +200,19 @@ let date  = new Date();
 date.isToday();
 ```
 
+## isEqual
+
+Permet de savoir si deux dates sont égales.  
+Ne prend pas en compte l'horaire
+
+### Exemple
+```js
+let date = new Date();
+let date2 = new Date();
+
+date.isEqual(date2);
+```
+
 # Methode d'extension Date partie heure
 
 ## setAddHour & setRemoveHour
