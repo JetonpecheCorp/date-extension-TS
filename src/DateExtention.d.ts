@@ -21,6 +21,13 @@ declare global {
     isToday(): boolean,
 
     /**
+     * Verifie que les dates sont égales (heure pas prise en compte)
+     * 
+     * @param _date date à comparer
+     */
+    isEqual(_date: Date): boolean;
+
+    /**
      * Formatter la date ou l'heure de l'instance actuelle
      * 
      * @param _format format demandé  
