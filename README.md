@@ -213,6 +213,20 @@ let date2 = new Date();
 date.isEqual(date2);
 ```
 
+## isInInterval
+
+Permet de savoir une date est dans une intervalle  
+Par défaut: ne prend pas en compte l'horaire
+
+### Exemple
+```js
+let date = new Date(2020, 0, 1);
+let date2 = new Date(2020, 0, 10);
+let date3 = new Date(2020, 0, 15);
+
+date.isInInterval(date2, date3, false);
+```
+
 # Methode d'extension Date partie heure
 
 ## setAddHour & setRemoveHour
